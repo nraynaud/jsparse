@@ -22,6 +22,8 @@
 // ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 
+(function () {
+
 var jsparse;
 try {
     jsparse = exports;
@@ -686,3 +688,19 @@ jsparse.inject_into = function inject_into(into) {
     }
 }
 
+// Support all the module systems.
+if ( typeof module === "object" && typeof module.exports === "object" ) {
+    module.exports = mod;
+
+} else if (typeof define === "function" && define.amd) {
+    define("jsparse", [], function () { return mod; });
+
+} else if
+    (typeof window === "object" && typeof window.document === "object") {
+    window.jsparse = mod;
+
+} else {
+    throw 'could not find valid method to export jsparse';
+} 
+
+}());
