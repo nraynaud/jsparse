@@ -1,0 +1,11 @@
+{
+  "name": "jsparse",
+  "description": "A parser combinator library",
+  "version": "0.1.1",
+  "homepage": "https://github.com/rictic/jsparse",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rictic/jsparse.git"
+  },
+  "main": "jsparse.js"
+} 
