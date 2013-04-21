@@ -690,14 +690,14 @@ jsparse.inject_into = function inject_into(into) {
 
 // Support all the module systems.
 if ( typeof module === "object" && typeof module.exports === "object" ) {
-    module.exports = mod;
+    module.exports = jsparse;
 
 } else if (typeof define === "function" && define.amd) {
-    define("jsparse", [], function () { return mod; });
+    define("jsparse", [], function () { return jsparse; });
 
 } else if
     (typeof window === "object" && typeof window.document === "object") {
-    window.jsparse = mod;
+    window.jsparse = jsparse;
 
 } else {
     throw 'could not find valid method to export jsparse';
