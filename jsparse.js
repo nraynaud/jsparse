@@ -693,7 +693,7 @@ if ( typeof module === "object" && typeof module.exports === "object" ) {
     module.exports = jsparse;
 
 } else if (typeof define === "function" && define.amd) {
-    define("jsparse", [], function () { return jsparse; });
+    define([], function () { return jsparse; });
 
 } else if
     (typeof window === "object" && typeof window.document === "object") {
